@@ -1,35 +1,66 @@
 import React from "react";
-import TestimonialCard from "./TestimonialCard";
+
+const testimonials = [
+  {
+    name: "Aarav Sharma",
+    college: "BHU Student",
+    review:
+      "StayNear helped me find a PG within 2 days. The process was smooth and completely hassle-free.",
+  },
+  {
+    name: "Priya Singh",
+    college: "MCA Student",
+    review:
+      "The listings were genuine and verified. I found a comfortable hostel near my college.",
+  },
+  {
+    name: "Rohit Verma",
+    college: "Engineering Student",
+    review:
+      "Best platform for students looking for affordable accommodation without brokerage.",
+  },
+];
 
 const Testimonials = () => {
-  const reviews = [
-    {
-      name: "Rahul Sharma",
-      college: "Delhi University",
-      review:
-        "Found a great PG within a week.",
-    },
-    {
-      name: "Priya Singh",
-      college: "BHU",
-      review:
-        "Very easy to use and trusted listings.",
-    },
-  ];
-
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-12">
-          Student Stories
-        </h2>
+        <div className="text-center mb-12">
+          <span className="text-blue-600 font-semibold">
+            Testimonials
+          </span>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {reviews.map((item, index) => (
-            <TestimonialCard
+          <h2 className="text-4xl font-bold mt-3">
+            What Students Say
+          </h2>
+
+          <p className="text-gray-500 mt-4">
+            Thousands of students trust StayNear for finding their ideal stay.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {testimonials.map((item, index) => (
+            <div
               key={index}
-              {...item}
-            />
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition"
+            >
+              <div className="text-yellow-500 text-xl mb-4">
+                ⭐⭐⭐⭐⭐
+              </div>
+
+              <p className="text-gray-600 mb-6">
+                "{item.review}"
+              </p>
+
+              <h3 className="font-bold text-lg">
+                {item.name}
+              </h3>
+
+              <p className="text-gray-500">
+                {item.college}
+              </p>
+            </div>
           ))}
         </div>
       </div>

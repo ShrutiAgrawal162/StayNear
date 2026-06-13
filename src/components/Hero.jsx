@@ -1,81 +1,106 @@
 import React from "react";
-import { Search, MapPin, Wallet, Bed } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative h-[90vh] overflow-hidden">
-      {/* Background Image */}
-      <img
-        src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1600"
-        alt="Student Accommodation"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
+    <section className="relative">
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-white/65"></div>
+      {/* Hero Section */}
+      <div
+        className="relative min-h-[90vh] md:h-175 bg-cover bg-center flex items-center"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop')`,
+        }}
+      >
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 h-full flex items-center">
-        <div className="max-w-2xl">
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-tight">
-            Find Your Ideal
-            <br />
-            <span className="text-blue-600">
-              Student Living
-            </span>
-            <br />
-            Space.
-          </h1>
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-white/70"></div>
 
-          <p className="mt-6 text-lg text-gray-700 max-w-xl">
-            Discover verified PGs and hostels near your university
-            with zero brokerage and premium student-first amenities.
-          </p>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full">
+          <div className="max-w-2xl">
 
-          {/* Search Bar */}
-          <div className="mt-10 bg-white rounded-2xl shadow-2xl p-3 flex flex-wrap gap-3 items-center max-w-4xl">
-            
-            <div className="flex items-center gap-2 border-r pr-4">
-              <MapPin size={18} className="text-blue-600" />
-              <input
-                type="text"
-                placeholder="Location"
-                className="outline-none"
-              />
+            {/* Badge */}
+            <div className="hidden sm:inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-md">
+              <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+              <span className="text-blue-600 text-sm font-medium">
+                Verified PGs & Hostels for Students
+              </span>
             </div>
 
-            <div className="flex items-center gap-2 border-r pr-4">
-              <Wallet size={18} className="text-blue-600" />
-              <input
-                type="text"
-                placeholder="Budget"
-                className="outline-none"
-              />
+            {/* Heading */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mt-6 md:mt-8 leading-tight">
+              Find Your Ideal
+              <br />
+              <span className="text-blue-600">
+                Student Living
+              </span>{" "}
+              Space.
+            </h1>
+
+            {/* Description */}
+            <p className="text-gray-700 text-base md:text-lg mt-4 md:mt-6 max-w-xl">
+              Discover verified PGs, hostels and shared rooms near your
+              university with zero brokerage and premium student-first
+              amenities.
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+
+              <button className="w-full sm:w-auto bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition">
+                Explore Properties →
+              </button>
+
+              <button className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition">
+                List Your Property
+              </button>
+
             </div>
-
-            <div className="flex items-center gap-2">
-              <Bed size={18} className="text-blue-600" />
-              <input
-                type="text"
-                placeholder="Room Type"
-                className="outline-none"
-              />
-            </div>
-
-            <button className="ml-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-xl flex items-center gap-2 transition">
-              <Search size={18} />
-              Search
-            </button>
-          </div>
-
-          {/* Stats */}
-          <div className="flex gap-6 mt-8 text-sm text-gray-700 font-medium">
-            <span>🏠 25,000+ Properties</span>
-            <span>📍 50+ Cities</span>
-            <span>⭐ 4.7/5 Rating</span>
           </div>
         </div>
       </div>
+
+      {/* Search Bar */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="bg-white rounded-2xl shadow-2xl p-5 mt-6 md:-mt-16 relative z-20">
+
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+
+            <input
+              type="text"
+              placeholder="Enter city or university"
+              className="border border-gray-200 rounded-xl px-4 py-4 outline-none focus:border-blue-500"
+            />
+
+            <select className="border border-gray-200 rounded-xl px-4 py-4 outline-none">
+              <option>Budget</option>
+              <option>₹2,000 - ₹5,000</option>
+              <option>₹5,000 - ₹10,000</option>
+              <option>₹10,000+</option>
+            </select>
+
+            <select className="border border-gray-200 rounded-xl px-4 py-4 outline-none">
+              <option>Room Type</option>
+              <option>Single</option>
+              <option>Double</option>
+              <option>Shared</option>
+            </select>
+
+            <select className="border border-gray-200 rounded-xl px-4 py-4 outline-none">
+              <option>Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Any</option>
+            </select>
+
+            <button className="bg-blue-600 text-white rounded-xl py-4 font-semibold hover:bg-blue-700 transition">
+              Search
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
     </section>
   );
 };

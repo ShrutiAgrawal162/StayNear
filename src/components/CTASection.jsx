@@ -2,27 +2,46 @@ import React from "react";
 
 const CTASection = () => {
   return (
-    <section className="py-20 px-6 my-16 bg-linear-to-r from-blue-600 to-cyan-500">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-          Ready to Find Your Perfect Stay?
-        </h2>
+    <section className="py-16 px-6 bg-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="bg-linear-to-r from-blue-700 to-blue-500 rounded-3xl overflow-hidden shadow-xl">
 
-        <p className="text-lg text-white/90 mb-10">
-          Search verified PGs, hostels and student accommodations near your
-          college.
-        </p>
+          <div className="grid md:grid-cols-3 items-center">
 
-        <div className="flex flex-col md:flex-row gap-4 justify-center max-w-2xl mx-auto">
-          <input
-            type="text"
-            placeholder="Search city, college or locality"
-            className="flex-1 px-5 py-4 rounded-xl bg-white text-gray-800 placeholder:text-gray-500 outline-none shadow-lg"
-          />
+            {/* Left Image */}
+            <div className="hidden md:block">
+              <img
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop"
+                alt="Student"
+                className="w-full h-80 object-cover"
+              />
+            </div>
 
-          <button className="bg-slate-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-800 transition duration-300">
-            Find Stay
-          </button>
+            {/* Right Content */}
+            <div className="md:col-span-2 p-8 md:p-12 text-white">
+              <h2 className="text-4xl font-bold leading-tight">
+                Ready to move into your new home?
+              </h2>
+
+              <p className="mt-4 text-blue-100 text-lg">
+                Join thousands of students living comfortably with StayNear.
+              </p>
+
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <input
+                  type="text"
+                  placeholder="Enter your college or city"
+                  className="flex-1 px-5 py-4 rounded-xl bg-white text-black placeholder:text-gray-500 outline-none"
+                />
+
+                <button className="bg-white text-blue-600 font-semibold px-8 py-4 rounded-xl hover:bg-gray-100 transition">
+                  Get Started
+                </button>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </section>

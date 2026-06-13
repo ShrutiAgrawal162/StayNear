@@ -1,7 +1,8 @@
 import React from "react";
 import { MapPin, Star } from "lucide-react";
-
+import {Link} from "react-router-dom";
 const PropertyCard = ({
+  id,
   image,
   title,
   location,
@@ -9,7 +10,8 @@ const PropertyCard = ({
   rating,
 }) => {
   return (
-    <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+    <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 cursor-pointer">
+      
       <img
         src={image}
         alt={title}
@@ -17,6 +19,7 @@ const PropertyCard = ({
       />
 
       <div className="p-5">
+        
         <div className="flex justify-between items-center">
           <h3 className="font-bold text-lg text-gray-800">
             {title}
@@ -37,11 +40,13 @@ const PropertyCard = ({
           <p className="text-blue-600 font-bold text-lg">
             ₹{price}/month
           </p>
-
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+          <Link to={`/property/${id}`}>
+          <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
             View Details
           </button>
+          </Link>
         </div>
+
       </div>
     </div>
   );
