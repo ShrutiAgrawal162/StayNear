@@ -11,7 +11,7 @@ import {
   ClipboardList,
   PlusCircle,
 } from "lucide-react";
-
+import OwnerProfile from "../pages/OwnerProfile";
 const OwnerNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -63,7 +63,7 @@ const OwnerNavbar = () => {
             </NavLink>
 
             <NavLink
-              to="/BookingRequests"
+              to="/BookingRequest"
               className={navClass}
             >
               <div className="flex items-center gap-1">
@@ -87,10 +87,13 @@ const OwnerNavbar = () => {
           {/* Desktop Right */}
           <div className="hidden md:flex items-center gap-4">
 
-            <button className="flex items-center gap-2 text-gray-700 hover:text-blue-600">
-              <User size={18} />
-              Profile
-            </button>
+          <NavLink
+           to="/OwnerProfile"
+           className="flex items-center gap-2 text-gray-700 hover:text-blue-600"
+            >
+            <User size={18} />
+            Profile
+          </NavLink>
 
             <button className="flex items-center gap-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">
               <LogOut size={18} />
@@ -196,10 +199,14 @@ const OwnerNavbar = () => {
 
           <hr />
 
-          <button className="flex items-center gap-2">
+          <NavLink
+            to="/OwnerProfile"
+            className="flex items-center gap-2"
+            onClick={() => setMenuOpen(false)}
+          >
             <User size={18} />
             Profile
-          </button>
+          </NavLink>
 
           <button className="flex items-center gap-2 text-red-600">
             <LogOut size={18} />

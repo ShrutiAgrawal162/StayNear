@@ -107,7 +107,7 @@ const OwnerDashboard = () => {
 
             <div className="grid md:grid-cols-3 gap-5">
 
-              <Link to="/add-property">
+              <Link to="/AddProperty">
                 <div className="bg-blue-50 hover:bg-blue-100 transition p-6 rounded-xl cursor-pointer">
                   <PlusCircle
                     size={35}
@@ -124,7 +124,7 @@ const OwnerDashboard = () => {
                 </div>
               </Link>
 
-              <Link to="/my-properties">
+              <Link to="/MyProperties">
                 <div className="bg-green-50 hover:bg-green-100 transition p-6 rounded-xl cursor-pointer">
                   <Home
                     size={35}
@@ -141,7 +141,7 @@ const OwnerDashboard = () => {
                 </div>
               </Link>
 
-              <Link to="/booking-requests">
+              <Link to="/BookingRequest">
                 <div className="bg-orange-50 hover:bg-orange-100 transition p-6 rounded-xl cursor-pointer">
                   <ClipboardList
                     size={35}

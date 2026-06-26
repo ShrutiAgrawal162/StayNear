@@ -16,6 +16,7 @@ import OwnerDashboard from "./pages/OwnerDashboard";
 import AddProperty from "./pages/AddProperty";
 import MyProperties from "./pages/MyProperties";
 import BookingRequest from "./pages/BookingRequests";
+import OwnerProfile from "./pages/OwnerProfile";
 function App() {
   return (
     <BrowserRouter>
@@ -35,6 +36,7 @@ function App() {
 <Route path="/AddProperty" element={<AddProperty />} />
 <Route path="/MyProperties" element={<MyProperties />} />
 <Route path="/BookingRequest" element={<BookingRequest />} />
+<Route path="/OwnerProfile" element={<OwnerProfile/>}/>
       </Routes>
     </BrowserRouter>
   );

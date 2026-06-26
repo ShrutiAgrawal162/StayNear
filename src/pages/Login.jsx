@@ -28,13 +28,13 @@ const Login = () => {
 
           <div className="relative z-10 flex flex-col justify-between p-10 text-white w-full">
             {/* Logo */}
-            <div className="flex items-center gap-3">
+           {/* <div className="flex items-center gap-3"> 
               <div className="bg-white p-2 rounded-lg">
                 <span className="text-blue-600 font-bold text-xl">🏢</span>
               </div>
               <h1 className="text-3xl font-bold">StayNear</h1>
             </div>
-
+                  */}
             {/* Hero Text */}
             <div>
               <h2 className="text-6xl font-bold leading-tight mb-4">

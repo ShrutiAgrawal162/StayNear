@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-
+import logo from "../assets/logo.png";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
@@ -16,7 +16,9 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
 
           {/* Logo */}
-          <Link to="/">
+          <Link to="/" className="flex items-center gap-3">
+          <img src={logo} alt="StayNear "
+          className="h-12 w-auto"/> 
             <h1 className="text-2xl md:text-3xl font-bold text-blue-600">
               StayNear
             </h1>
